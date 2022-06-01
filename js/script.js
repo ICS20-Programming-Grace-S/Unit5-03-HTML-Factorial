@@ -2,42 +2,30 @@
 // Created on: April 2022
 // This file contains the JS functions for index.html
 
-'use strict';
+"use strict"
 
 /**
- * This function displays product of factorial
+ * This function displays all numbers from 0 up to the user number
  */
 function factorial() {
-  
-  // Variables for user's number and message at the end
-  let numberFactorial = parseInt(document.getElementById('user-integer').value);
+  	// initialize the counter
+	let counter = 1
+  let factorial = 1
+	
+	// initialize the final sentence display	
+	
+	// get the user number
+	let userNum = parseInt(document.getElementById('userNum').value)	
 
-  // Initializes Variables 
-  let message = "";
-  let counter = numberFactorial
+	// use a do..while loop to create the final sentence display
+	do {
+		// build the string of sentences
+		factorial = factorial * counter 
+		
+		//increment the counter
+		counter = counter + 1
+	} while (counter <= userNum)
 
-  // IF statement to make sure the user inputted a valid number
-  if (numberFactorial >= 0) {
-    
-    // IF statement to check if the user inputted a 1 or 0
-    if (numberFactorial != 0 && numberFactorial != 1) {
-
-      // DO WHILE loop to calculate factorial
-      do {
-        counter--;
-        numberFactorial = numberFactorial * counter;
-      } while (counter > 1);
-      message = "The factorial of this number: " + numberFactorial;
-      
-      // IF the user entered 0 or 1
-    } else {
-      message = "The factorial of this number: 1"
-    }
-    // IF user did not enter a number
-  } else {
-    message = "Please enter a valid number in the input box!";
-  }
-  
-  // Displays factorial of number inputted (or error message)
-  document.getElementById("output").innerHTML = message;
+  	// return the string of sentences back to html
+  	document.getElementById('output').innerHTML = "The factorial of the number you inputted is: " + factorial
 }

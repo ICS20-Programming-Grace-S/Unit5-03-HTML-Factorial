@@ -5,31 +5,18 @@
 */
 
 body {
-  background-color: rgb(127, 221, 181);
+	background-color: rgb(239, 209, 250);
   text-align: center;
+}
+
+
+#output {
+  font-weight: bold;
+  background-color: #F3DDFB;
 }
 
 h1 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #DD7FA7;
-	font-weight: bold;
-  height: 50px;
-}
-
-h2 {  border-style: solid;
-  background-color: #6FC19E;
-  color: #cf779d;
-  border-color: #DD7FA7;
-  text-align: center;
-}
-
-.mdl-layout-title {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #DD7FA7;
-	font-weight: bold;
-  height: 50px;
+	background-color: #E0A3F4;
+  color: rgb(183, 244, 163);
+  padding: 30px;
 }
